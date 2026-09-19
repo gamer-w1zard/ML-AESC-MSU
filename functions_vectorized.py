@@ -96,8 +96,6 @@ def pairwise_distance(x, y):
 
     Vctorized implementation.
     """
-    x = np.asarray(x, dtype=float)
-    y = np.asarray(y, dtype=float)
     x1 = np.sum(x * x, axis=1)[:, None]
     y1 = np.sum(y * y, axis=1)[None, :]
     s = x1 + y1 - 2 * x @ y.T
