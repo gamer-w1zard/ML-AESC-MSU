@@ -16,7 +16,6 @@ def prod_non_zero_diag(x):
         if (x[i][i] != 0):
             ans *= x[i][i]
     return ans
-    pass
 
 
 def are_multisets_equal(x, y):
@@ -29,12 +28,9 @@ def are_multisets_equal(x, y):
 
     Not vectorized implementation.
     """
-    x1 = x
     x1.sort()
-    y1 = y
     y1.sort()
     return (x1 == y1)
-    pass
 
 
 def max_after_zero(x):
@@ -52,7 +48,6 @@ def max_after_zero(x):
         if (x[i - 1] == 0 and x[i] > ans):
             ans = x[i]
     return ans
-    pass
 
 
 def convert_image(img, coefs):
@@ -77,7 +72,6 @@ def convert_image(img, coefs):
                 cnt += img[i][j][q] * coefs[q]
             ans[i][j] = cnt
     return ans
-    pass
 
 
 def run_length_encoding(x):
@@ -105,7 +99,6 @@ def run_length_encoding(x):
             values.append(x[i])
     counts.append(cnt)
     return values, counts
-    pass
 
 
 def pairwise_distance(x, y):
@@ -130,4 +123,3 @@ def pairwise_distance(x, y):
                 s += (x[i][q] - y[j][q]) ** 2
             ans[i][j] = sqrt(s)
     return ans
-    pass

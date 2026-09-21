@@ -16,7 +16,6 @@ def prod_non_zero_diag(x):
     data = x[x != 0]
     ans = np.prod(data)
     return ans
-    pass
 
 
 def are_multisets_equal(x, y):
@@ -30,7 +29,6 @@ def are_multisets_equal(x, y):
     Vectorized implementation.
     """
     return np.array_equal(np.sort(x), np.sort(y))
-    pass
 
 
 def max_after_zero(x):
@@ -46,7 +44,6 @@ def max_after_zero(x):
     left = x[:-1]
     mask = (left == 0)
     return np.max(x[1:][mask])
-    pass
 
 
 def convert_image(img, coefs):
@@ -60,10 +57,7 @@ def convert_image(img, coefs):
 
     Vectorized implementation.
     """
-    img = np.asarray(img)
-    coefs = np.asarray(coefs)
     return (img * coefs).sum(axis=2)
-    pass
 
 
 def run_length_encoding(x):
@@ -83,7 +77,6 @@ def run_length_encoding(x):
     values = x[starts]
     counts = np.diff(np.r_[starts, x.size])
     return values, counts
-    pass
 
 
 def pairwise_distance(x, y):
@@ -99,6 +92,4 @@ def pairwise_distance(x, y):
     x1 = np.sum(x * x, axis=1)[:, None]
     y1 = np.sum(y * y, axis=1)[None, :]
     s = x1 + y1 - 2 * x @ y.T
-    s = np.maximum(s, 0)
     return np.sqrt(s)
-    pass
